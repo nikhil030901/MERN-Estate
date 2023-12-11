@@ -112,7 +112,7 @@ export default function CreateListing() {
     if (
       e.target.type === "number" ||
       e.target.type === "text" ||
-      e.target.id === "textarea"
+      e.target.type === "textarea"
     ) {
       setFormData({
         ...formData,
@@ -355,7 +355,7 @@ export default function CreateListing() {
             disabled={loading || uploading}
             className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
           >
-            {loading ? "Creating" : "Create listing"};
+            {loading ? "Creating" : "Create listing"}
           </button>
           {error && <p className="text-red-700 text-sm">{error}</p>}
         </div>
